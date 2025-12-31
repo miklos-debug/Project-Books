@@ -11,20 +11,29 @@ BookPulse is an original short book summary experience with optional audio and a
 ## Getting started (beginner-friendly, step-by-step)
 Follow these steps exactly from the repo root (the folder that contains this README). Every command shown is meant to be pasted into your terminal in this order.
 
-### 0) Find the repo folder on your machine (so commands run in the right place)
-If `cd /workspace/Project-Books` fails on your Mac/PC, you are simply in a different directory than this project. Do this:
+### 0) Download the project and move into the folder
+Pick one option to get the code onto your computer:
 
-1. Open Terminal (macOS) or PowerShell (Windows).
-2. List your folders to see where the project lives:
-   - macOS/Linux: `ls`
-   - Windows: `dir`
-3. If you downloaded a zip, it is usually in `Downloads`. Move into it:
+**Option A: Using Git (recommended if you have Git installed)**
+1. Open Terminal (macOS/Linux) or PowerShell (Windows).
+2. Choose a parent folder to store the project (e.g., `Documents`). Move there:
+   - macOS/Linux: `cd ~/Documents`
+   - Windows: `cd $HOME/Documents`
+3. Clone the repo: `git clone https://github.com/<your-copy-or-fork>/Project-Books.git`
+4. Enter the folder: `cd Project-Books`
+
+**Option B: Downloading a ZIP (no Git required)**
+1. In your browser, download the project ZIP from GitHub (Code → Download ZIP).
+2. Open your Downloads folder and unzip the file. It will create a folder such as `Project-Books-main` or `Project-Books`.
+3. Open Terminal (macOS/Linux) or PowerShell (Windows) and go to the Downloads folder:
    - macOS/Linux: `cd ~/Downloads`
    - Windows: `cd $HOME/Downloads`
-4. List again (`ls` or `dir`) and look for the unzipped project folder name (for example `Project-Books`).
-5. Change into that folder, then confirm you see this README by running `ls` (or `dir`). You should see `README.md`, `apps`, `packages`, and `supabase` listed. If you do not, move up or down a level until you do.
+4. Move into the unzipped project folder (adjust the name if it differs):
+   - macOS/Linux: `cd Project-Books-main`
+   - Windows: `cd Project-Books-main`
 
-All remaining commands must be run **after** you have changed into that folder.
+**Verify you are in the right place**
+Run `pwd` (macOS/Linux) or `cd` (Windows) to print the current folder path. Then run `ls` (or `dir` on Windows) and make sure you see at least: `README.md`, `apps`, `packages`, and `supabase`. If you do not, move up or down one level until you do. All remaining commands must be run **after** you see those items.
 
 ### 1) Install the tools you need (one-time)
 - Install **Node.js 18+** (https://nodejs.org) and **npm**. On macOS you can use Homebrew (`brew install node`); on Windows use the official installer.
