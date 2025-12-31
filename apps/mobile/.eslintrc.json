@@ -1,0 +1,6 @@
+{
+  "extends": ["universe/native", "universe/shared/typescript-analysis"],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "off"
+  }
+}

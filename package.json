@@ -1,0 +1,18 @@
+{
+  "name": "bookpulse-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "npm@9.8.1",
+  "workspaces": [
+    "apps/mobile",
+    "apps/admin",
+    "packages/shared"
+  ],
+  "scripts": {
+    "dev:admin": "npm --workspace apps/admin run dev",
+    "dev:mobile": "npm --workspace apps/mobile run start",
+    "lint": "npm --workspace apps/admin run lint && npm --workspace apps/mobile run lint",
+    "build:shared": "npm --workspace packages/shared run build",
+    "postinstall": "npm run build:shared"
+  }
+}
