@@ -9,7 +9,22 @@ BookPulse is an original short book summary experience with optional audio and a
 - Data fetching: TanStack Query
 
 ## Getting started (beginner-friendly, step-by-step)
-Follow these steps exactly from the repo root (`/workspace/Project-Books`). Every command shown is meant to be pasted into your terminal in this order.
+Follow these steps exactly from the repo root (the folder that contains this README). Every command shown is meant to be pasted into your terminal in this order.
+
+### 0) Find the repo folder on your machine (so commands run in the right place)
+If `cd /workspace/Project-Books` fails on your Mac/PC, you are simply in a different directory than this project. Do this:
+
+1. Open Terminal (macOS) or PowerShell (Windows).
+2. List your folders to see where the project lives:
+   - macOS/Linux: `ls`
+   - Windows: `dir`
+3. If you downloaded a zip, it is usually in `Downloads`. Move into it:
+   - macOS/Linux: `cd ~/Downloads`
+   - Windows: `cd $HOME/Downloads`
+4. List again (`ls` or `dir`) and look for the unzipped project folder name (for example `Project-Books`).
+5. Change into that folder, then confirm you see this README by running `ls` (or `dir`). You should see `README.md`, `apps`, `packages`, and `supabase` listed. If you do not, move up or down a level until you do.
+
+All remaining commands must be run **after** you have changed into that folder.
 
 ### 1) Install the tools you need (one-time)
 - Install **Node.js 18+** (https://nodejs.org) and **npm**. On macOS you can use Homebrew (`brew install node`); on Windows use the official installer.
