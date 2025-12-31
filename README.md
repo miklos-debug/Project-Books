@@ -46,16 +46,22 @@ npm install
 ```
 If your network blocks npm, try again on a different network or with a VPN.
 
-### 3) Add your Supabase credentials to env files
+### 3) Add your Supabase credentials to env files (exact commands)
 You need your project URL and anon key from the Supabase dashboard (Settings → API).
 
-Create `apps/admin/.env.local` **and** `apps/mobile/.env` with this content (replace the placeholders):
-```env
+Run these commands **from the repo root (`/workspace/Project-Books`)** to create the files with your values:
+```bash
+cat <<'EOF' > apps/admin/.env.local
 NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+EOF
+
+cat <<'EOF' > apps/mobile/.env
 EXPO_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
 EXPO_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+EOF
 ```
+Replace the placeholders before pressing Enter (the files are created in `apps/admin` and `apps/mobile`). If you are unsure you are in the right folder, run `pwd` first and confirm it prints `/workspace/Project-Books`.
 
 ### 4) Set up the local database with Supabase CLI
 From the repo root run:
@@ -92,6 +98,7 @@ npm run dev:mobile
 - If `npm install` fails with a registry or SSL error, retry on a new network or ensure corporate proxies are configured.
 - If Supabase CLI commands fail, confirm the CLI is installed (`supabase --version`) and that Docker is running (required for local DB).
 - To reset everything, rerun the commands from Step 4.
+- On macOS, the terminal may remind you that the default shell is now `zsh`. You can keep using the provided commands as-is; you do **not** need to run `chsh` or change shells to continue.
 
 ### Admin notes
 - Content management lives under `/content` (list, create, edit) and feed controls live under `/segments`.
