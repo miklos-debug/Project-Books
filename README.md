@@ -13,8 +13,31 @@ Follow these steps exactly from the repo root (`/workspace/Project-Books`). Ever
 
 ### 1) Install the tools you need (one-time)
 - Install **Node.js 18+** (https://nodejs.org) and **npm**. On macOS you can use Homebrew (`brew install node`); on Windows use the official installer.
-- Install the **Supabase CLI** so you can apply the database schema (https://supabase.com/docs/guides/cli/getting-started).
+- Install the **Supabase CLI** so you can apply the database schema (https://supabase.com/docs/guides/cli/getting-started). A detailed beginner walkthrough is below.
 - (Optional but helpful) Install **Expo Go** on your iOS/Android device from the app store to preview the mobile app.
+
+#### How to install the Supabase CLI (step by step)
+Follow the steps for your operating system. After installing, verify with `supabase --version`.
+
+**macOS (Homebrew)**
+1. Open the Terminal app.
+2. Install Homebrew if you do not have it yet: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+3. Install the CLI: `brew install supabase/tap/supabase`
+4. Confirm: `supabase --version`
+
+**Windows (PowerShell + Scoop)**
+1. Open **PowerShell** as Administrator.
+2. Install Scoop (Windows package manager): `iwr -useb get.scoop.sh | iex`
+3. Install the CLI: `scoop install supabase`
+4. Confirm: `supabase --version`
+
+**Linux (curl install script)**
+1. Open your terminal.
+2. Run: `curl -fsSL https://supabase.com/cli/install/linux | sh`
+3. Ensure `~/.supabase/bin` is on your `PATH` (the installer prints the command to add; copy/paste it).
+4. Confirm: `supabase --version`
+
+If you prefer another package manager, the Supabase docs list alternative options. The CLI requires Docker when you use `supabase db` commands locally.
 
 ### 2) Install project dependencies
 Run this once after cloning:
